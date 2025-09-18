@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-gray-100 h-screen flex flex-col justify-center items-center">
+    <!-- <div class="relative top-12 left-24 bg-indigo-600 text-white size-96">
+        <h2>Relative</h2>
+        <div class="absolute right-12 bottom-6">Absolute</div>
+    </div> -->
+
+    <!-- <div class="h-screen bg-indigo-200"></div>
+    <div class="h-screen bg-indigo-300">
+        <div class="text-white sticky top-12 bg-indigo-500 text-center">Sticky</div>
+    </div> -->
+
+
+
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+        const stickyElement = document.getElementById("sticky");
+        const parent = stickyElement.parentElement;
+
+        const stickyStart = parent.offsetTop;
+
+        window.addEventListener("scroll", ()=>{
+            if(window.scrollY > stickyStart){
+                stickyElement.classList.remove("opacity-0");
+                stickyElement.classList.add("opacity-100");
+            }else{
+                stickyElement.classList.remove("opacity-100");
+                stickyElement.classList.add("opacity-0");
+            }
+        });
+    });
+</script> -->
+
+    <div class="bg-white flex justify-around overflow-hidden flex-col space-y-10 sm:space-y-0 sm:flex-row items-center p-5 shadow-lg m-10 rounded-lg">
+        <button class="transition-colors duration-300 p-2 rounded-lg hover:bg-black hover:text-white" onclick="loadContent('relative.html')">Relative</button>
+        <button class="transition-colors duration-300 p-2 rounded-lg hover:bg-black hover:text-white" onclick="loadContent('absolute.html')">Absolute</button>
+        <button class="transition-colors duration-300 p-2 rounded-lg hover:bg-black hover:text-white" onclick="loadContent('fixed.html')">Fixed</button>
+        <button class="transition-colors duration-300 p-2 rounded-lg hover:bg-black hover:text-white" onclick="loadContent('sticky.html')">Sticky</button>
+    </div>
+
+    <div id="container" class="container border border- rounded-lg flex-1 bg-white mx-3 mb-2 overflow-scroll">
+        <h2 class="font-semibold text-xl pt-4 text-center">Select a button to see a demo</h2>
+    </div>
+
+    <script>
+        async function loadContent(url){
+            try{
+                const response = await fetch(url);
+                if(!response.ok){
+                    throw new Error(`HTTP Error! Status: ${response.status}`);
+                }
+
+                const content = await response.text();
+                document.getElementById("container").innerHTML = content;
+            }catch(e){
+                alert("Failed to load Content");
+                document.getElementById("container").innerHTML = '<p class="text-red-500 mt-2">Error loading Demo</p>'
+            }
+        }
+    </script>
+</body> 
+</html>
