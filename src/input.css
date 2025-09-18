@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* @import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Galindo&family=Gothic+A1&family=Outfit:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+:root {
+    --font-outfit: 'Outfit', sans-serif;
+    --font-galindo: "Galindo", Arial;
+}
+
+.font-outfit{
+    font-family: var(--font-outfit);
+}
+
+.font-galindo{
+    font-family: var(--font-galindo);
+}
+
+@theme{
+    
+}
