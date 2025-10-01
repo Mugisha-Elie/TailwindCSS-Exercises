@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+    <section class="overflow-hidden text-white bg-cover bg-center bg-blue-700 min-h-screen flex flex-col justify-around items-center ">
+
+        
+        <div class="self-start p-2 shadow-xl font-semibold text-xl bg-blue-800 rounded-r cursor-pointer">
+            <ul id="animations" class="flex space-x-3 ml-2 md:ml-65">
+                <li id="spin" class="hover:underline hover:text-blue-300 hover:decoration-amber-400">Spin</li>
+                <li id="ping" class="hover:underline hover:text-blue-300">Ping</li>
+                <li id="pulse" class="hover:underline hover:text-blue-300">Pulse</li>
+                <li id="bounce" class="hover:underline hover:text-blue-300">Bounce</li>
+        </ul>
+        </div>
+        
+
+        <div id="object" class="flex items-center gap-3 shadow-2xl rounded-2xl md:p-5 p-3 bg-blue-800 hover:scale-110 transition-all duration-400 cursor-pointer">
+            <svg class="md:size-40 size-20" viewBox="0 0 1024.00 1024.00" xmlns="http://www.w3.org/2000/svg" fill="#fff" stroke="#000000" stroke-width="0"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="20.48"></g><g id="SVGRepo_iconCarrier"> <circle cx="512" cy="512" r="512" style="fill:#0052ff"></circle> <path d="M516.3 361.83c60.28 0 108.1 37.18 126.26 92.47H764C742 336.09 644.47 256 517.27 256 372.82 256 260 365.65 260 512.49S370 768 517.27 768c124.35 0 223.82-80.09 245.84-199.28H642.55c-17.22 55.3-65 93.45-125.32 93.45-83.23 0-141.56-63.89-141.56-149.68.04-86.77 57.43-150.66 140.63-150.66z" style="fill:#fff"></path> </g></svg>
+
+            <h1 class="md:text-9xl text-3xl md:-mt-10 -mt-2 font-semibold">coinbase</h1>
+        </div>
+
+
+        <div id="stop" class="self-end md:mr-70 hover:scale-110 transition-all duration-300 mr-2 bg-blue-800  px-5 py-2 shadow-xl rounded">
+            <h2 class="text-xl cursor-pointer hover:text-blue-300">Stop</h2>
+        </div>
+        
+       
+
+        
+    </section>
+    <script src="./src/main.js"></script>
+</body>
+</html>
